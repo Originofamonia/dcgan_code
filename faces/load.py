@@ -1,12 +1,11 @@
 import sys
-sys.path.append('..')
-
 import os
 from fuel.datasets.hdf5 import H5PYDataset
 from fuel.schemes import ShuffledScheme, SequentialScheme
 from fuel.streams import DataStream
-
 from lib.config import data_dir
+sys.path.append('..')
+
 
 def faces(ntrain=None, nval=None, ntest=None, batch_size=128):
     path = os.path.join(data_dir, 'faces_364293_128px.hdf5')
